@@ -49,6 +49,8 @@ Route::middleware(['auth:api'])->group(function () {
 
 });
 
+Route::post('/paypal/payment', [PayPalController::class, 'createPayment']);
+Route::post('/paypal/execute', [PayPalController::class, 'executePayment']);
 
 /////////////register route///////////
 
